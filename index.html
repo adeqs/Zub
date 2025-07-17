@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperMolar</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function playAudio() {
+      const audio = document.getElementById('voice');
+      audio.play();
+    }
+  </script>
+  <style>
+    .play-icon {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      margin-top: -12px;
+      margin-left: -12px;
+      top: 50%;
+      left: 50%;
+      pointer-events: none;
+      fill: #000;
+      opacity: 0.8;
+    }
+    .icon-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>SuperMolar</h1>
+  <p style="max-width: 700px; text-align: center;">
+    "I was creating worlds.<br>
+    I contemplated the whole Galaxy.<br>
+    I believed in best.<br>
+    And now I’ve barely ran from some tooth fairy?!<br>
+    That’s enough."<br><br>
+    — <em>SuperMolar</em>
+  </p>
+
+  <div class="icon-wrapper" onclick="playAudio()">
+    <svg class="tooth" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 10c-12 0-25 8-25 25s7 40 12 48 10-3 13-3 6 8 12 3 13-31 13-48S62 10 50 10z"/>
+    </svg>
+    <svg class="play-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 5v14l11-7z" />
+    </svg>
+  </div>
+
+  <div class="secret">Click the tooth. He's not done yet.</div>
+
+  <audio id="voice">
+    <source src="https://upload.wikimedia.org/wikipedia/en/8/89/NumbEncore.ogg" type="audio/ogg">
+  </audio>
+</body>
+</html>
