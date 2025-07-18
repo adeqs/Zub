@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 2em;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+p {
+  font-size: 1.2em;
+}
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1em;
+}
+input[type="file"] {
+  display: none;
+}
+#tooth {
+  margin-top: 2em;
+  cursor: pointer;
+}
+#tooth img {
+  width: 120px;
+}
