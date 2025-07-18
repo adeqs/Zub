@@ -1,0 +1,40 @@
+
+body {
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 3em;
+}
+h1 {
+  font-size: 3em;
+}
+.custom-file-upload {
+  cursor: pointer;
+  margin: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.1em;
+  color: white;
+}
+input[type="file"] {
+  display: none;
+}
+#tooth {
+  margin: 30px auto;
+  width: 100px;
+  height: 130px;
+  background-color: white;
+  border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+  position: relative;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: orange;
+  font-size: 2em;
+}
