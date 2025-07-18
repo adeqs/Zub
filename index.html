@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SuperMolar – Just For You</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SuperMolar</h1>
+    <p>Upload <strong>12 mp3 files</strong>.<br/>Then press the tooth – and it will play for you, only you.</p>
+    <input type="file" id="fileInput" multiple accept=".mp3" />
+    <div class="tooth-wrapper" onclick="playRandom()">
+      <img src="tooth.svg" alt="Tooth" class="tooth" />
+      <div class="play-icon">▶</div>
+    </div>
+    <audio id="player"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
