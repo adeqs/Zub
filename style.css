@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px 20px;
+}
+h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.upload-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.player img {
+  width: 150px;
+  cursor: pointer;
+}
+#trash {
+  width: 32px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+input[type="file"] {
+  display: none;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SuperMolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SuperMolar</h1>
+    <p class="subtitle">
+      I was creating worlds.<br>
+      I contemplated the whole Galaxy.<br>
+      I believed in best.<br>
+      And now I've barely run from some tooth fairy?!<br>
+      <strong>That's enough.</strong>
+    </p>
+    <label for="fileInput" class="upload-label">Upload songs (up to 12)</label>
+    <input type="file" id="fileInput" accept="audio/*" multiple hidden>
+    <div class="player">
+      <img src="tooth.png" id="tooth" alt="Play Tooth">
+    </div>
+    <img src="trash.png" id="trash" alt="Delete Playlist">
+  </div>
+  <audio id="audio" src="default.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
