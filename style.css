@@ -1,0 +1,35 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+#fileInput {
+  margin: 20px 0;
+  font-size: 1em;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+img {
+  width: 300px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+#trash {
+  width: 40px;
+  cursor: pointer;
+  margin-top: 30px;
+}
