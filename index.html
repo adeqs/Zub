@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SuperMolar</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    img {
+      width: 150px;
+      margin: 30px auto;
+      display: block;
+      cursor: pointer;
+    }
+    #delete {
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    input[type="file"] {
+      display: none;
+    }
+    label[for="upload"] {
+      display: block;
+      margin: 10px auto;
+      font-size: 1em;
+      cursor: pointer;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SuperMolar</h1>
+  <p>I was creating worlds.<br>
+  I contemplated the whole Galaxy.<br>
+  I believed in best.<br>
+  And now I've barely run from some<br>
+  tooth fairy?!</p>
+  <p class="bold">That's enough.</p>
+
+  <label for="upload">Upload songs (up to 12)</label>
+  <input type="file" id="upload" multiple accept="audio/*">
+
+  <img src="tooth.png" id="tooth" alt="Play Tooth">
+  <div id="playlist"></div>
+  <img src="trash.png" id="delete" alt="Delete Playlist" width="40">
+
+  <audio id="audioPlayer" controls style="display:none;"></audio>
+
+  <script>
+    const upload = document.getElementById('upload');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const tooth = document.getElementById('tooth');
+    const deleteBtn = document.getElementById('delete');
+    let playlist = [];
+    let currentIndex = 0;
+    let defaultTrack = "default.mp3";
+    let userTracks = [];
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    function playTrack(index) {
+      if (userTracks.length === 0) {
+        audioPlayer.src = defaultTrack;
+        audioPlayer.play();
+      } else {
+        audioPlayer.src = URL.createObjectURL(userTracks[index]);
+        audioPlayer.play();
+      }
+    }
+
+    function nextTrack() {
+      if (userTracks.length === 0) return;
+      currentIndex++;
+      if (currentIndex >= userTracks.length) {
+        userTracks = shuffle(userTracks);
+        currentIndex = 0;
+      }
+      playTrack(currentIndex);
+    }
+
+    audioPlayer.addEventListener('ended', nextTrack);
+
+    upload.addEventListener('change', (e) => {
+      userTracks = Array.from(e.target.files).slice(0, 12);
+      if (userTracks.length > 0) {
+        userTracks = shuffle(userTracks);
+        currentIndex = 0;
+        playTrack(currentIndex);
+      }
+    });
+
+    tooth.addEventListener('click', () => {
+      if (userTracks.length > 0) {
+        playTrack(currentIndex);
+      } else {
+        audioPlayer.src = defaultTrack;
+        audioPlayer.play();
+      }
+    });
+
+    deleteBtn.addEventListener('click', () => {
+      userTracks = [];
+      upload.value = "";
+      audioPlayer.pause();
+      audioPlayer.src = defaultTrack;
+    });
+  </script>
+</body>
+</html>
