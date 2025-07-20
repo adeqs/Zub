@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+h1 {
+  font-size: 3em;
+}
+.tooth-img {
+  width: 150px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+.bin-img {
+  width: 24px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.upload-label {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
