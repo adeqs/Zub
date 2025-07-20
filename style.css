@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.upload-label {
+    margin-top: 1em;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.tooth {
+    width: 160px;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.delete-icon {
+    width: 32px;
+    margin-top: 1.5em;
+    cursor: pointer;
+}
