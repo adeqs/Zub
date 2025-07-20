@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperMolar</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: sans-serif; text-align: center; padding: 2em; }
+        #tooth { width: 180px; cursor: pointer; margin-top: 20px; }
+        #trash { width: 30px; cursor: pointer; margin-top: 20px; }
+        #fileInput { display: none; }
+        label[for="fileInput"] { background: none; border: none; font-size: 1.2em; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>I used to be part of the system. Now I play my own tune.</h1>
+    <label for="fileInput">Upload songs (up to 12)</label>
+    <input type="file" id="fileInput" accept="audio/mp3" multiple />
+    <div><img src="tooth.png" id="tooth" alt="Tooth"></div>
+    <div><img src="trash.png" id="trash" alt="Delete"></div>
+    <script src="script.js"></script>
+</body>
+</html>
